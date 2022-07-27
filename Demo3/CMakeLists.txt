@@ -9,10 +9,12 @@ project (Demo3)
 aux_source_directory(. DIR_SRCS)
 
 # 添加 math 子目录
-add_subdirectory(math)
+# add_subdirectory(math)
+
+add_subdirectory(lib)
 
 # 指定生成目标
 add_executable(Demo ${DIR_SRCS})
 
 # 添加链接库
-target_link_libraries(Demo MathFunctions)
+target_link_libraries(Demo testlib-static)
